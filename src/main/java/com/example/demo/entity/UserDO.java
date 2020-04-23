@@ -7,12 +7,14 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.util.Date;
 import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 
 /**
 * Created by Mybatis Generator 2020/03/18
 */
 @Data
 @TableName(value = "user")
+@Slf4j
 public class UserDO implements Serializable {
     /**
      * 主键id

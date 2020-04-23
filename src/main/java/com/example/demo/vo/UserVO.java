@@ -5,4 +5,8 @@ import lombok.Data;
 
 @Data
 public class UserVO extends UserDO {
+
+    /***
+     * 测试一下
+     */
 }
