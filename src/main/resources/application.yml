@@ -6,12 +6,14 @@ spring:
       enabled: true
   datasource:
     # 配置数据源
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     # 使用druid连接池
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://127.0.0.1:3306/test?autoReconnect=true&useSSL=false&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://192.168.29.129:3306/test?autoReconnect=true&useSSL=false&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
     username: root
-    password: root
+    password: 123456
+  redis:
+    host: 192.168.29.129
 mybatis-plus:
   global-config:
     db-config:
@@ -23,7 +25,7 @@ mybatis-plus:
       logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
   mapper-locations: classpath:/mapper/*.xml
 server:
-  port: 8443
+  port: 8080
 logging:
   level:
     com.example.demo: debug
