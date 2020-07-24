@@ -26,6 +26,17 @@ mybatis-plus:
   mapper-locations: classpath:/mapper/*.xml
 server:
   port: 8080
+eureka:
+  instance:
+    hostname: demo
+    prefer-ip-address: true
+    ip-address: 192.168.29.129
+    instance-id: ${eureka.instance.ip-address}:${server.port}
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.ip-address}:8021/eureka/,http://${eureka.instance.ip-address}:8022/eureka/
 logging:
   level:
     com.example.demo: debug
